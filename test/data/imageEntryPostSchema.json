@@ -1,0 +1,17 @@
+{
+  "title": "imageEntry Post Schema",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "status": {
+        "offset": {
+          "description": "Whether the upload was succesful.",
+          "type": "string"
+        }
+      },
+      "required": ["status"]
+    }
+  },
+  "required": ["data"]
+}

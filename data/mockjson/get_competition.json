@@ -1,0 +1,16 @@
+{
+  "data":
+  {
+    "competitionId": "2016-05-24_123",
+    "title": "First competition",
+    "description": "<h1>Hurrah, a competition</h1>",
+    "dateEntriesClose": "2016-06-01T14:00:28+00:00",
+    "dateVotesClose": "2016-06-08T14:00:28+00:00"
+  },
+  "pagination": {
+    "offset": 0,
+    "returned": 1,
+    "limit": 10,
+    "total": 1
+  }
+}

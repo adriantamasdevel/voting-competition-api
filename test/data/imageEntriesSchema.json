@@ -1,0 +1,70 @@
+{
+  "title": "imageEntries Schema",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "imageEntries": {
+          "description": "The image entries for this.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "imageId": {
+                "description": "The imageId for this image entry.",
+                "type": "string"
+              },
+              "description": {
+                "description": "The user submitted image for this entry.",
+                "type": "string"
+              },
+              "dateSubmitted": {
+                "description": "The date the user submitted this image.",
+                "type": "string",
+                "format": "date-time"
+              },
+              "competitionId": {
+                "description": "The competition this image was entered for.",
+                "type": "integer"
+              },
+              "imageURL": {
+                "description": "The URL that the image will be served from.",
+                "type": "string"
+              }
+            },
+            "required": ["imageId", "description", "dateSubmitted", "competitionId", "imageURL"]
+          }
+        },
+        "randomToken": {
+          "description": "If the sorting was 'rand' then this token allows you to page through the data consistently.",
+          "type": "string"
+        }
+      },
+      "required": ["imageEntries"]
+    },
+    "pagination": {
+      "type": "object",
+      "properties": {
+        "offset": {
+          "description": "The offset of the pagination for this response.",
+          "type": "integer"
+        },
+        "returned": {
+          "description": "The number of items returned in this response.",
+          "type": "integer"
+        },
+        "limit": {
+          "description": "The limit used for the pagination of this.",
+          "type": "integer"
+        },
+        "total": {
+          "description": "The total number of items.",
+          "type": "integer"
+        }
+      },
+      "required": ["offset", "returned", "limit", "total"]
+    }
+  },
+  "required": ["data", "pagination"]
+}

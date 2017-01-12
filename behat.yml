@@ -1,0 +1,20 @@
+default:
+  autoload: [ %paths.base%/features/bootstrap ]
+  suites:
+    imageCompetitionAPI:
+      filters:
+        tags: ~@skip
+      paths:    [ %paths.base%/test/features ]
+      contexts: [ AppTest\ImageCompetitionApiContext ]
+    default:
+      filters:
+        tags: ~@skip
+  extensions:
+    Behat\MinkExtension:
+      browser_name: firefox
+      base_url: http://en.wikipedia.org/
+      sessions:
+        default:
+          selenium2:
+            wd_host: "http://localhost:4444/wd/hub"
+

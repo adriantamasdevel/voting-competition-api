@@ -1,0 +1,23 @@
+{
+  "title": "image schema",
+  "type": "object",
+  "properties": {
+    "data": {
+      "properties": {
+        "image": {
+          "properties": {
+            "imageId": {
+              "description": "The imageId of the uploaded image.",
+              "type": "string"
+            }
+          },
+          "required": ["imageId"]
+        },
+        "required": ["image"]
+      }
+    }
+  },
+  "required": ["data"]
+}
+
+
